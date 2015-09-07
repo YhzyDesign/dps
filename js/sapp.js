@@ -32,14 +32,14 @@ var sapp = (function(){
 			}
 		};
 
-	document.addEventListener("touchstart",_start);
-	document.addEventListener( "touchmove",_move);
-	document.addEventListener(  "touchend",_end);
-	document.addEventListener( "mousedown",_start);
-	document.addEventListener(   "mouseup",_end);
-	document.onmousewheel = function(e){
-		sapp.event.call("swipe", {dir:(e.wheelDelta>0 ? "swipeDown" : "swipeUp")});
-	}
+	//document.addEventListener("touchstart",_start);
+	//document.addEventListener( "touchmove",_move);
+	//document.addEventListener(  "touchend",_end);
+	//document.addEventListener( "mousedown",_start);
+	//document.addEventListener(   "mouseup",_end);
+	//document.onmousewheel = function(e){
+	//	sapp.event.call("swipe", {dir:(e.wheelDelta>0 ? "swipeDown" : "swipeUp")});
+	//}
 	//
 	return _sapp;
 })();
