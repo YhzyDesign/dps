@@ -7,59 +7,40 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/plugin.css">
+    <link rel="stylesheet" href="css/slide.css">
 
     <!-- Demo styles -->
     <style>
-    html, body {
-        position: relative;
-        height: 100%;
-    }
-    body {
-        background: #000;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color:#000;
-        margin: 0;
-        padding: 0;
-    }
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #000;
-
-    }
-    .swiper-slide img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-      -ms-transform: translate(-50%, -50%);
-      -webkit-transform: translate(-50%, -50%);
-      -moz-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      position: absolute;
-      left: 50%;
-      top: 50%;
-    }
     </style>
 </head>
 <body>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            <div class="swiper-slide ">
                 <!-- Required swiper-lazy class and image source specified in data-src attribute -->
                 <img data-src="images/1.jpg" class="swiper-lazy">
                 <!-- Preloader image -->
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
             </div>
-            <div class="swiper-slide">
-                <img data-src="images/2.jpg" class="swiper-lazy">
-                <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+            <div id="slide2" class="swiper-slide scrolly">
+
+              <section class="main">
+                <article>
+                <h1>One shoe does good,
+                    the other shoe kicks ass.</h1>
+                <p><strong>NIKE FREE TR FIT</strong>
+                The Free TR Fit is designed with a lower environmental impact using
+                environmentally preferred rubber, water-based cementing and recycled polyester.
+                That means every step in the multi-directional flex groove outsole replicates
+                the foot's natural movement and helps women get more out of their workout without
+                leaving a huge environmental footprint. Everyone's a winner.</p>
+                </article>
+                <div class="parallax1" data-velocity="-.1"></div>
+                <div class="parallax2" data-velocity="-.5" data-fit="525"></div>
+              </section>
+
             </div>
             <div class="swiper-slide">
                 <img data-src="images/3.jpg" class="swiper-lazy">
@@ -89,6 +70,7 @@
     <!-- Swiper JS -->
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/plugins/jquery.scrolly.js"></script>
     <script src="js/setup.js"></script>
 
 

@@ -1,6 +1,7 @@
 (function () {
   'use strict';
   var dps = new Swiper('.swiper-container', {
+      //slideClass: 'slide',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
       pagination: '.swiper-pagination',
@@ -11,7 +12,13 @@
       lazyLoading: true,
       lazyLoadingInPrevNext: true,
       preloadSlides: 3,
-      preloadSlideWithClass: function( swiper, slide){
+      preloadSlideWithClass: function( swiper, slideWrapper){
+        var slide = slideWrapper.slide;
+        //https://github.com/Victa/scrolly
+        //<div id="item" class="parallax" data-velocity=".8"></div>
+        if( slide.hasClass('scrolly')){
+           $('.main', slide).scrolly();
+        }
         console.log( slide )
       },
       onInit: function(swiper){
@@ -43,8 +50,7 @@
 
   // Add handler that will be executed only once
   dps.on('slideChangeEnd', function (swiper) {
-    swiper.activeIndex;
-    swiper.previousIndex;
+
 
     // load next slides
     if(swiper.params.preloadSlides){
